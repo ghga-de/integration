@@ -1,0 +1,36 @@
+name: ifrs
+image: ghga/internal-file-registry-service
+description: Internal File Registry Service
+summary: |
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+  pellentesque posuere ante, ac porttitor nulla eleifend quis. Mauris eget
+  aliquam diam. Duis laoreet blandit luctus. Donec at lacus porta, bibendum
+  lectus dignissim, eleifend est. Etiam sit amet blandit dui. Cras id ante et
+  neque hendrerit vulputate non aliquam eros.
+produces:
+  events:
+    - topic: internal_file_registry
+      type: file_registered
+      config: file_registered_event
+    - topic: internal_file_registry
+      type: file_staged_for_download
+      config: file_staged_event
+consumes:
+  events:
+    - topic: file_interrogation
+      type: file_validation_success
+      config: files_to_register
+    - topic: file_downloads
+      type: file_stage_requested
+      config: file_to_stage
+storage:
+  mongodb: true
+  s3:
+    - bucket: outbox
+      mode: read
+    - bucket: inbox
+      mode: read
+    - bucket: permanent
+      mode: read
+    - bucket: staging
+      mode: read

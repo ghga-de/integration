@@ -1,0 +1,27 @@
+name: irs
+image: interrogation-room-service
+description: Interrogation Room Service
+summary: ""
+consumes:
+  events:
+    - topic: file_uploads
+      type: file_upload_received
+      config: upload_received_event
+  rest_endpoints:
+    - service: eks
+      path: /secrets
+      method: POST
+produces:
+  events:
+    - topic: file_interrogation
+      type: file_validation_success
+      config: interrogation_success
+    - topic: file_interrogation
+      type: file_validation_failure
+      config: interrogation_failure
+storage:
+  s3:
+    - bucket: inbox
+      mode: read
+    - bucket: staging
+      mode: read-write

@@ -1,0 +1,28 @@
+name: dcs
+image: download-controller-service
+description: Interrogation Room Service
+summary: ""
+consumes:
+  events:
+    - topic: internal_file_registry
+      type: file_registered
+      config: files_to_register
+produces:
+  events:
+    - topic: file_downloads
+      type: download_served
+      config: download_served_event
+    - topic: file_downloads
+      type: file_registered
+      config: file_registered_event
+    - topic: file_downloads
+      type: unstaged_download_requested
+      config: unstaged_download_event
+  rest_endpoints:
+    - path: /objects/{object_id}
+      method: GET
+storage:
+  s3:
+    - bucket: outbox
+      mode: read-write
+  mongodb: true

@@ -1,0 +1,19 @@
+name: ekss
+image: encryption-key-store-service
+description: Encryption Key Store Service
+summary: ""
+consumes:
+  events: []
+  rest_endpoints: []
+produces:
+  events: []
+  rest_endpoints:
+    - path: /secrets
+      method: POST
+    - path: /secrets/{secret_id}/envelopes/{client_pk}
+      method: GET
+storage:
+  vault: true
+config:
+  - server_private_key
+  - server_public_key

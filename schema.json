@@ -1,0 +1,157 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Service Integration",
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "image" : {
+            "type" : "string"
+        },
+        "description": {
+            "type": "string"
+        },
+        "summary": {
+            "type": "string"
+        },
+        "command": {
+            "type": "string"
+        },
+        "consumes": {
+            "type": "object",
+            "properties": {
+                "events": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/$defs/EventType"
+                    }
+                },
+                "rest_endpoints": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/$defs/ConsumedRESTEndpointType"
+                    }
+                }
+            },
+            "additionalProperties": false
+        },
+        "produces": {
+            "type": "object",
+            "properties": {
+                "events": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/$defs/EventType"
+                    }
+                },
+                "rest_endpoints": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/$defs/RESTEndpointType"
+                    }
+                }
+            },
+            "additionalProperties": false
+        },
+        "storage": {
+            "type": "object",
+            "properties": {
+                "s3": {
+                    "type": "array",
+                    "items" : {
+                        "type" : "object",
+                        "properties" : {
+                            "bucket" : {
+                                "type" : "string"
+                            },
+                            "mode" : {
+                                "enum" : ["read", "write", "read-write"]
+                            }
+                        },
+                        "additionalProperties" : false,
+                        "required" : ["bucket", "mode"]
+                    }
+                },
+                "mongodb": {
+                    "type": "boolean"
+                },
+                "vault" : {
+                    "type" : "boolean"
+                }
+            },
+            "additionalProperties": false
+        },
+        "config" : {
+            "type" : "array",
+            "items" : {
+                "type" : "string"
+            }
+        }
+    },
+    "additionalProperties": false,
+    "required": [
+        "name",
+        "image",
+        "description",
+        "summary"
+    ],
+    "$defs": {
+        "EventType": {
+            "type": "object",
+            "properties": {
+                "topic": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string"
+                },
+                "config" : {
+                    "type" : "string"
+                }
+            },
+            "required": [
+                "topic",
+                "type",
+                "config"
+            ],
+            "additionalProperties": false
+        },
+        "RESTEndpointType": {
+            "type": "object",
+            "properties": {
+                "method": {
+                    "type": "string"
+                },
+                "path": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "method",
+                "path"
+            ],
+            "additionalProperties": false
+        },
+        "ConsumedRESTEndpointType": {
+            "type": "object",
+            "properties": {
+                "service": {
+                    "type" : "string"
+                },
+                "method": {
+                    "type": "string"
+                },
+                "path": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "service",
+                "method",
+                "path"
+            ],
+            "additionalProperties": false
+        }
+    }
+}
