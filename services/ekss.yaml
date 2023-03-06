@@ -17,5 +17,7 @@ storage:
     - path: /cryptkeys
       mode: read-write
 config:
-  - server_private_key
-  - server_public_key
+  - name: server_private_key
+    description: The server private key
+  - name: server_public_key
+    description: The server public key

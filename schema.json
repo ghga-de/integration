@@ -107,7 +107,15 @@
         "config" : {
             "type" : "array",
             "items" : {
-                "type" : "string"
+                "type" : "object",
+                "properties" : {
+                    "name" : {
+                        "type" : "string"
+                    },
+                    "description" : {
+                        "type" : "string"
+                    }
+                }
             }
         }
     },
