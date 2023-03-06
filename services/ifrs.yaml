@@ -6,6 +6,7 @@ summary: |
   aliquam diam. Duis laoreet blandit luctus. Donec at lacus porta, bibendum
   lectus dignissim, eleifend est. Etiam sit amet blandit dui. Cras id ante et
   neque hendrerit vulputate non aliquam eros.
+version: main
 produces:
   events:
     - topic: internal_file_registry

@@ -1,6 +1,7 @@
 shortname: ekss
 name: encryption-key-store-service
 summary: ""
+version: main
 consumes:
   events: []
   rest_endpoints: []

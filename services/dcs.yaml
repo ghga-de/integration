@@ -1,6 +1,7 @@
 shortname: dcs
 name: download-controller-service
 summary: ""
+version: main
 consumes:
   events:
     - topic: internal_file_registry

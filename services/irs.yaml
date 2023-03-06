@@ -1,6 +1,7 @@
 shortname: irs
 name: interrogation-room-service
 summary: ""
+version: main
 consumes:
   events:
     - topic: file_uploads

@@ -12,6 +12,9 @@
         "summary": {
             "type": "string"
         },
+        "version" : {
+            "type" : "string"
+        },
         "command": {
             "type": "string"
         },
@@ -90,7 +93,8 @@
     "required": [
         "shortname",
         "name",
-        "summary"
+        "summary",
+        "version"
     ],
     "$defs": {
         "EventType": {
