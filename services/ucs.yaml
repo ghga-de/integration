@@ -1,6 +1,5 @@
-name: ucs
-image: upload-controller-service
-description: Interrogation Room Service
+shortname: ucs
+name: upload-controller-service
 summary: ""
 consumes:
   events:

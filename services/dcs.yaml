@@ -1,6 +1,5 @@
-name: dcs
-image: download-controller-service
-description: Interrogation Room Service
+shortname: dcs
+name: download-controller-service
 summary: ""
 consumes:
   events:

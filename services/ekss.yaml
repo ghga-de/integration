@@ -1,6 +1,5 @@
-name: ekss
-image: encryption-key-store-service
-description: Encryption Key Store Service
+shortname: ekss
+name: encryption-key-store-service
 summary: ""
 consumes:
   events: []

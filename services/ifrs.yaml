@@ -1,6 +1,5 @@
-name: ifrs
-image: ghga/internal-file-registry-service
-description: Internal File Registry Service
+shortname: ifrs
+name: internal-file-registry-service
 summary: |
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
   pellentesque posuere ante, ac porttitor nulla eleifend quis. Mauris eget

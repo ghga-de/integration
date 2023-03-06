@@ -1,6 +1,5 @@
-name: irs
-image: interrogation-room-service
-description: Interrogation Room Service
+shortname: irs
+name: interrogation-room-service
 summary: ""
 consumes:
   events:
