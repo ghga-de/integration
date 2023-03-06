@@ -35,4 +35,6 @@ storage:
       mode: read
     - bucket: staging
       mode: read
-  mongodb: true
+  mongodb:
+    - db: ucs
+      mode: read-write

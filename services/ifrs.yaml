@@ -24,7 +24,9 @@ consumes:
       type: file_stage_requested
       config: file_to_stage
 storage:
-  mongodb: true
+  mongodb:
+    - db: ifrs
+      mode: read-write
   s3:
     - bucket: outbox
       mode: read

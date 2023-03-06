@@ -13,7 +13,9 @@ produces:
     - path: /secrets/{secret_id}/envelopes/{client_pk}
       method: GET
 storage:
-  vault: true
+  vault:
+    - path: /cryptkeys
+      mode: read-write
 config:
   - server_private_key
   - server_public_key

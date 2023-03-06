@@ -25,4 +25,6 @@ storage:
   s3:
     - bucket: outbox
       mode: read-write
-  mongodb: true
+  mongodb:
+    - name: dcs
+      mode: read-write
