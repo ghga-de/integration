@@ -8,16 +8,20 @@ api:
       - topic: metadata
         type: file_metadata_upserts
         config: file_metadata_event
+        description: New or changed metadata on files that shall be registered for uploaded
       - topic: internal_file_registry
         type: file_registered
         config: upload_accepted_event
+        description: Indicates that an upload was by downstream services
       - topic: file_interrogation
         type: file_validation_failure
         config: upload_rejected_event
+        description: Informing about rejection of an upload by downstream services due to validation failure
     produces:
       - topic: file_uploads
         type: file_upload_received
         config: upload_received_event
+        description: Informing about new file uploads
   rest:
     produces:
       - method: GET

@@ -144,12 +144,16 @@
                 },
                 "config" : {
                     "type" : "string"
+                },
+                "description" : {
+                    "type" : "string"
                 }
             },
             "required": [
                 "topic",
                 "type",
-                "config"
+                "config",
+                "description"
             ],
             "additionalProperties": false
         },

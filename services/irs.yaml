@@ -8,13 +8,16 @@ api:
       - topic: file_uploads
         type: file_upload_received
         config: upload_received_event
+        description: Inform about new file uploads
     produces:
       - topic: file_interrogation
         type: file_validation_success
         config: interrogation_success
+        description: Informing about the success of a file validation
       - topic: file_interrogation
         type: file_validation_failure
         config: interrogation_failure
+        description: Informing about the failure of a file validation
   rest:
     consumes:
       - service: eks

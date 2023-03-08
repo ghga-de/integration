@@ -13,16 +13,20 @@ api:
       - topic: internal_file_registry
         type: file_registered
         config: file_registered_event
+        description: Indicating that a new file has been internally registered
       - topic: internal_file_registry
         type: file_staged_for_download
         config: file_staged_event
+        description: Indicating that a new file has been internally registered
     consumes:
       - topic: file_interrogation
         type: file_validation_success
         config: files_to_register
+        description: Informing about new files to register
       - topic: file_downloads
         type: file_stage_requested
-        config: file_to_stage
+        config: files_to_stage
+        description: Informing about a file to be staged
 storage:
   mongodb:
     - db_name: ifrs
