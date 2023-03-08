@@ -22,14 +22,19 @@ api:
     produces:
       - method: GET
         path: /files/{file_id}
+        authentication: true
       - method: POST
         path: /uploads
+        authentication: true
       - method: GET
         path: /uploads/{upload_id}
+        authentication: true
       - method: PATCH
         path: /uploads/{upload_id}
+        authentication: true
       - method: POST
         path: /uploads/{upload_id}/parts/{part_no}/signed_urls
+        authentication: true
 storage:
   s3:
     - bucket: inbox
@@ -37,5 +42,5 @@ storage:
     - bucket: staging
       mode: read
   mongodb:
-    - db: ucs
+    - db_name: ucs
       mode: read-write

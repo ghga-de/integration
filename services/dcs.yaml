@@ -22,10 +22,11 @@ api:
     produces:
       - path: /objects/{object_id}
         method: GET
+        authentication: true
 storage:
   s3:
     - bucket: outbox
       mode: read-write
   mongodb:
-    - db: dcs
+    - db_name: dcs
       mode: read-write

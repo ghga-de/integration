@@ -7,8 +7,10 @@ api:
     produces:
       - path: /secrets
         method: POST
+        authentication: true
       - path: /secrets/{secret_id}/envelopes/{client_pk}
         method: GET
+        authentication: true
 storage:
   vault:
     - path: /cryptkeys

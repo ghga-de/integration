@@ -25,7 +25,7 @@ api:
         config: file_to_stage
 storage:
   mongodb:
-    - db: ifrs
+    - db_name: ifrs
       mode: read-write
   s3:
     - bucket: outbox

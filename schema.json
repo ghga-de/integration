@@ -70,7 +70,7 @@
                                 "type" : "string"
                             },
                             "mode" : {
-                                "$ref": "#/$defs/AccessMode"
+                                "$ref": "#/$defs/ReadWriteReadwriteAccessMode"
                             }
                         },
                         "additionalProperties" : false,
@@ -82,13 +82,14 @@
                     "items" : {
                         "type" : "object",
                         "properties" : {
-                            "db" : {
+                            "db_name" : {
                                 "type" : "string"
                             },
                             "mode" : {
-                                "$ref": "#/$defs/AccessMode"
+                                "$ref": "#/$defs/ReadReadwriteAccessMode"
                             }
-                        }
+                        },
+                        "additionalProperties" : false
                     }
                 },
                 "vault" : {
@@ -100,9 +101,10 @@
                                 "type" : "string"
                             },
                             "mode" : {
-                                "$ref": "#/$defs/AccessMode"
+                                "$ref": "#/$defs/ReadReadwriteAccessMode"
                             }
-                        }
+                        },
+                        "additionalProperties" : false
                     }
                 }
             },
@@ -159,11 +161,15 @@
                 },
                 "path": {
                     "type": "string"
+                },
+                "authentication": {
+                    "type": "boolean"
                 }
             },
             "required": [
                 "method",
-                "path"
+                "path",
+                "authentication"
             ],
             "additionalProperties": false
         },
@@ -187,7 +193,10 @@
             ],
             "additionalProperties": false
         },
-        "AccessMode" : {
+        "ReadReadwriteAccessMode" : {
+            "enum" : ["read", "read-write"]
+        },
+        "ReadWriteReadwriteAccessMode" : {
             "enum" : ["read", "write", "read-write"]
         }
     }
