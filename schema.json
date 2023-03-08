@@ -18,37 +18,41 @@
         "command": {
             "type": "string"
         },
-        "consumes": {
+        "api": {
             "type": "object",
             "properties": {
-                "events": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/$defs/EventType"
+                "rest" : {
+                    "type" : "object",
+                    "properties" : {
+                        "produces" : {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/$defs/RESTEndpointType"
+                            }
+                        },
+                        "consumes" : {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/$defs/ConsumedRESTEndpointType"
+                            }
+                        }
                     }
                 },
-                "rest_endpoints": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/$defs/ConsumedRESTEndpointType"
-                    }
-                }
-            },
-            "additionalProperties": false
-        },
-        "produces": {
-            "type": "object",
-            "properties": {
-                "events": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/$defs/EventType"
-                    }
-                },
-                "rest_endpoints": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/$defs/RESTEndpointType"
+                "events" : {
+                    "type" : "object",
+                    "properties" : {
+                        "produces": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/$defs/EventType"
+                            }
+                        },
+                        "consumes": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/$defs/EventType"
+                            }
+                        }
                     }
                 }
             },
@@ -104,7 +108,7 @@
             },
             "additionalProperties": false
         },
-        "config" : {
+        "extra_config" : {
             "type" : "array",
             "items" : {
                 "type" : "object",

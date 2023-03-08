@@ -2,21 +2,18 @@ shortname: ekss
 name: encryption-key-store-service
 summary: ""
 version: main
-consumes:
-  events: []
-  rest_endpoints: []
-produces:
-  events: []
-  rest_endpoints:
-    - path: /secrets
-      method: POST
-    - path: /secrets/{secret_id}/envelopes/{client_pk}
-      method: GET
+api:
+  rest:
+    produces:
+      - path: /secrets
+        method: POST
+      - path: /secrets/{secret_id}/envelopes/{client_pk}
+        method: GET
 storage:
   vault:
     - path: /cryptkeys
       mode: read-write
-config:
+extra_config:
   - name: server_private_key
     description: The server private key
   - name: server_public_key

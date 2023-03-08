@@ -2,33 +2,34 @@ shortname: ucs
 name: upload-controller-service
 summary: ""
 version: main
-consumes:
+api:
   events:
-    - topic: metadata
-      type: file_metadata_upserts
-      config: file_metadata_event
-    - topic: internal_file_registry
-      type: file_registered
-      config: upload_accepted_event
-    - topic: file_interrogation
-      type: file_validation_failure
-      config: upload_rejected_event
-produces:
-  events:
-    - topic: file_uploads
-      type: file_upload_received
-      config: upload_received_event
-  rest_endpoints:
-    - method: GET
-      path: /files/{file_id}
-    - method: POST
-      path: /uploads
-    - method: GET
-      path: /uploads/{upload_id}
-    - method: PATCH
-      path: /uploads/{upload_id}
-    - method: POST
-      path: /uploads/{upload_id}/parts/{part_no}/signed_urls
+    consumes:
+      - topic: metadata
+        type: file_metadata_upserts
+        config: file_metadata_event
+      - topic: internal_file_registry
+        type: file_registered
+        config: upload_accepted_event
+      - topic: file_interrogation
+        type: file_validation_failure
+        config: upload_rejected_event
+    produces:
+      - topic: file_uploads
+        type: file_upload_received
+        config: upload_received_event
+  rest:
+    produces:
+      - method: GET
+        path: /files/{file_id}
+      - method: POST
+        path: /uploads
+      - method: GET
+        path: /uploads/{upload_id}
+      - method: PATCH
+        path: /uploads/{upload_id}
+      - method: POST
+        path: /uploads/{upload_id}/parts/{part_no}/signed_urls
 storage:
   s3:
     - bucket: inbox

@@ -7,22 +7,22 @@ summary: |
   lectus dignissim, eleifend est. Etiam sit amet blandit dui. Cras id ante et
   neque hendrerit vulputate non aliquam eros.
 version: main
-produces:
+api:
   events:
-    - topic: internal_file_registry
-      type: file_registered
-      config: file_registered_event
-    - topic: internal_file_registry
-      type: file_staged_for_download
-      config: file_staged_event
-consumes:
-  events:
-    - topic: file_interrogation
-      type: file_validation_success
-      config: files_to_register
-    - topic: file_downloads
-      type: file_stage_requested
-      config: file_to_stage
+    produces:
+      - topic: internal_file_registry
+        type: file_registered
+        config: file_registered_event
+      - topic: internal_file_registry
+        type: file_staged_for_download
+        config: file_staged_event
+    consumes:
+      - topic: file_interrogation
+        type: file_validation_success
+        config: files_to_register
+      - topic: file_downloads
+        type: file_stage_requested
+        config: file_to_stage
 storage:
   mongodb:
     - db: ifrs

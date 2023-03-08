@@ -2,23 +2,24 @@ shortname: irs
 name: interrogation-room-service
 summary: ""
 version: main
-consumes:
+api:
   events:
-    - topic: file_uploads
-      type: file_upload_received
-      config: upload_received_event
-  rest_endpoints:
-    - service: eks
-      path: /secrets
-      method: POST
-produces:
-  events:
-    - topic: file_interrogation
-      type: file_validation_success
-      config: interrogation_success
-    - topic: file_interrogation
-      type: file_validation_failure
-      config: interrogation_failure
+    consumes:
+      - topic: file_uploads
+        type: file_upload_received
+        config: upload_received_event
+    produces:
+      - topic: file_interrogation
+        type: file_validation_success
+        config: interrogation_success
+      - topic: file_interrogation
+        type: file_validation_failure
+        config: interrogation_failure
+  rest:
+    consumes:
+      - service: eks
+        path: /secrets
+        method: POST
 storage:
   s3:
     - bucket: inbox
