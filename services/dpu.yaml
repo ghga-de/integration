@@ -1,0 +1,11 @@
+shortname: dpu
+name: data-portal-ui
+summary: |
+  GHGA Data Portal front end interface
+version: main
+api:
+  rest:
+    consumes:
+      - service: mrs
+        path: /metadata_summary
+        method: GET

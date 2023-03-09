@@ -1,0 +1,59 @@
+shortname: as
+name: auth-service
+summary: |
+  This service contains two sub-services for the management, authentication 
+  and authorization of users of the GHGA data portal. The `auth_adapter` 
+  subpackage contains the authentication service used by the API gateway 
+  via the ExtAuth protocol. The `user_management` subpackage contains the 
+  user data management service. The setting `run_auth_adapter` can be used to 
+  determine which of the two services will be started.
+version: main
+api:
+  rest:
+    produces:
+      - path: /users
+        method: POST
+        authentication: true
+      - path: /users/{id}
+        method: DELETE
+        authentication: true
+      - path: /users/{id}
+        method: GET
+        authentication: true
+      - path: /users/{id}
+        method: PATCH
+        authentication: true
+      - path: /users/{id}
+        method: PUT
+        authentication: true
+      - path: /users/{user_id}/claims
+        method: GET
+        authentication: true
+      - path: /users/{user_id}/claims
+        method: POST
+        authentication: true
+      - path: /users/{user_id}/claims/{claim_id}
+        method: DELETE
+        authentication: true
+      - path: /users/{user_id}/claims/{claim_id}
+        method: PATCH
+        authentication: true
+storage:
+  mongodb:
+    - db_name: auth_service
+      mode: read-write
+extra_config:
+    - name: auth_int_keys
+      description: Internal public key for user management
+    - name: auth_ext_keys
+      description: External public key set for auth adapter
+    - name: auth_ext_algs
+      description: Allowed algorithms for signing external tokens
+    - name: basic_auth_user
+      description: User(s) for basic authentication
+    - name: basic_auth_pwd
+      description: Password(s) for basic authentication
+    - name: oidc_authority_url
+      description: OIDC Authority Url
+    - name: oidc_client_id
+      description: OIDC Client Id

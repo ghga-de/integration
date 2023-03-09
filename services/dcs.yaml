@@ -1,6 +1,8 @@
 shortname: dcs
 name: download-controller-service
-summary: ""
+summary: |
+  Download Controller Service (DRS) implements the GA4GH DRS, 
+  while providing the option to serve files from localstack S3.
 version: main
 api:
   events:
@@ -27,6 +29,10 @@ api:
       - path: /objects/{object_id}
         method: GET
         authentication: true
+    consumes:
+      - service: ekss
+        path: /secrets/{secret_id}/envelopes/{client_pk}
+        method: GET
 storage:
   s3:
     - bucket: outbox

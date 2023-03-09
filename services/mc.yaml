@@ -1,0 +1,20 @@
+shortname: mc
+name: metadata-catalog
+summary: |
+  GHGA Metadata Catalog front end interface
+version: main
+api:
+  rest:
+    consumes:
+      - service: mss
+        path:  /rpc/search
+        method: POST
+      - service: mrs
+        path: /datasets/{dataset_id}
+        method: GET
+      - service: mrs
+        path: /dataset_summary/{dataset_id}
+        method: POST
+      - service: mrs
+        path: /metadata_summary
+        method: GET
