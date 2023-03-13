@@ -1,13 +1,12 @@
 shortname: ifrs
 name: internal-file-registry-service
-summary: |
-  This service acts as a registry for the internal location and 
-  representation of files. Upon providing an internal file ID, 
-  it delivers a URL to the corresponding file. If the file is 
-  located on a permanent storage system that is not accessible 
-  to other services (i.e. not S3, e.g. a flat-file system), 
-  this service SHOULD stage the file into an accessible S3-based 
-  storage system and serve the location to the staged file.
+summary: "This service acts as a registry for the internal location and 
+          representation of files. Upon providing an internal file ID, 
+          it delivers a URL to the corresponding file. If the file is 
+          located on a permanent storage system that is not accessible 
+          to other services (i.e. not S3, e.g. a flat-file system), 
+          this service SHOULD stage the file into an accessible S3-based 
+          storage system and serve the location to the staged file."
 version: main
 api:
   events:

@@ -1,12 +1,11 @@
 shortname: mrs
 name: metadata-repository-service
-summary: |
-  The Metadata Repository Service (MRS) is storing study or 
-  dataset-related metadata and implements a RESTful API for 
-  controlled submission and manipulation of this metadata. 
-  The service is also responsible for validating the incoming 
-  metadata JSON and ensuring that the metadata records are 
-  conformant to the GHGA Metadata Schema.
+summary: "The Metadata Repository Service (MRS) is storing study or 
+          dataset-related metadata and implements a RESTful API for 
+          controlled submission and manipulation of this metadata. 
+          The service is also responsible for validating the incoming 
+          metadata JSON and ensuring that the metadata records are 
+          conformant to the GHGA Metadata Schema."
 version: main
 api:
   rest:

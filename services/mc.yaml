@@ -1,7 +1,6 @@
 shortname: mc
 name: metadata-catalog
-summary: |
-  GHGA Metadata Catalog front end interface
+summary: "GHGA Metadata Catalog front end interface"
 version: main
 api:
   rest:
@@ -14,7 +13,8 @@ api:
         method: GET
       - service: mrs
         path: /dataset_summary/{dataset_id}
-        method: POST
+        method: GET
       - service: mrs
         path: /metadata_summary
         method: GET
+storage: {}

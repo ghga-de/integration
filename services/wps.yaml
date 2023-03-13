@@ -1,8 +1,7 @@
 shortname: wps
 name: work-package-service
-summary: |
-  The work package service manages work packages 
-  that can be used by the GHGA CLI client.
+summary: "The work package service manages work packages 
+          that can be used by the GHGA CLI client."
 version: main
 storage:
   mongodb:

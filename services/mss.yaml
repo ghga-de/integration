@@ -1,8 +1,7 @@
 shortname: mss
 name: metadata-search-service
-summary: |
-  The Metadata Search Service (MRS) is a service for providing 
-  a unified search interface over a metadata store.
+summary: "The Metadata Search Service (MRS) is a service for providing 
+          a unified search interface over a metadata store."
 version: main
 api:
   rest:
