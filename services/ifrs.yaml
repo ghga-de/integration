@@ -1,0 +1,43 @@
+shortname: ifrs
+name: internal-file-registry-service
+summary: "This service acts as a registry for the internal location and 
+          representation of files. Upon providing an internal file ID, 
+          it delivers a URL to the corresponding file. If the file is 
+          located on a permanent storage system that is not accessible 
+          to other services (i.e. not S3, e.g. a flat-file system), 
+          this service SHOULD stage the file into an accessible S3-based 
+          storage system and serve the location to the staged file."
+version: main
+api:
+  events:
+    produces:
+      - topic: internal_file_registry
+        type: file_registered
+        config: file_registered_event
+        description: Indicating that a new file has been internally registered
+      - topic: internal_file_registry
+        type: file_staged_for_download
+        config: file_staged_event
+        description: Indicating that a new file has been internally registered
+    consumes:
+      - topic: file_interrogation
+        type: file_validation_success
+        config: files_to_register
+        description: Informing about new files to register
+      - topic: file_downloads
+        type: file_stage_requested
+        config: files_to_stage
+        description: Informing about a file to be staged
+storage:
+  mongodb:
+    - db_name: ifrs
+      mode: read-write
+  s3:
+    - bucket: outbox
+      mode: read
+    - bucket: inbox
+      mode: read
+    - bucket: permanent
+      mode: read
+    - bucket: staging
+      mode: read

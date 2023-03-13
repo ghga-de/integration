@@ -1,0 +1,24 @@
+shortname: ekss
+name: encryption-key-store-service
+summary: "The Encryption Key Store Service (EKS) handles storage and retrieval 
+          of encryption/decryption secrets, extraction of information from and 
+          creation of personalized Crypt4GH file envelopes."
+version: main
+api:
+  rest:
+    produces:
+      - path: /secrets
+        method: POST
+        authentication: true
+      - path: /secrets/{secret_id}/envelopes/{client_pk}
+        method: GET
+        authentication: true
+storage:
+  vault:
+    - path: /cryptkeys
+      mode: read-write
+extra_config:
+  - name: server_private_key
+    description: The server private key
+  - name: server_public_key
+    description: The server public key
