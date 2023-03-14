@@ -1,0 +1,40 @@
+name: Deploy to GitHub Pages
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+          cache: 'pip' # caching pip dependencies
+
+      - name: Install gdevutil
+        run: pip install git+https://github.com/ghga-de/ghga-devutil.git@0.0.1-rc.1
+      
+      - name: Install hugo
+        run: sudo apt-get install -y hugo 
+
+      - name: Generate markdown
+        run: hugo new site html
+
+      - name: Load hugo theme
+        run: git clone --depth 1 -b master https://github.com/alex-shpak/hugo-book html/themes/hugo-book
+
+      - run: mkdir -p html/content/docs/services
+      
+      - run: gdevutil markdown services/*.yaml html/content/docs/services
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: html
