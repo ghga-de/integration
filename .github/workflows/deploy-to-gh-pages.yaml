@@ -20,17 +20,19 @@ jobs:
       - name: Install hugo
         run: sudo apt-get install -y hugo 
 
-      - name: Generate markdown
+      - name: Create hugo site
         run: hugo new site html
 
       - name: Load hugo theme
         run: git clone --depth 1 -b master https://github.com/alex-shpak/hugo-book html/themes/hugo-book
 
-      - run: mkdir -p html/content/docs/services
+      - name: Generate markdown files from yaml
+        run: mkdir -p html/content/docs/services && gdevutil markdown services/*.yaml html/content/docs/services
       
-      - run: gdevutil markdown services/*.yaml html/content/docs/services
+      - name: Build site
+        run: cd html && hugo --theme hugo-book
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: html
+          folder: html/public
