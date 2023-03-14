@@ -14,11 +14,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - uses: actions/setup-python@v4
-        with:
-          python-version: '3.9'
-          cache: 'pip' # caching pip dependencies
-
       - name: Install gdevutil
         run: pip install git+https://github.com/ghga-de/ghga-devutil.git@main
       
