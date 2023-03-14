@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - main
+      - feature/markdown-to-gh-pages-GDEV-1688
 
 jobs:
   deploy: 
@@ -19,7 +20,7 @@ jobs:
           cache: 'pip' # caching pip dependencies
 
       - name: Install gdevutil
-        run: pip install git+https://github.com/ghga-de/ghga-devutil.git@0.0.1-rc.1
+        run: pip install git+https://github.com/ghga-de/ghga-devutil.git@main
       
       - name: Install hugo
         run: sudo apt-get install -y hugo 
