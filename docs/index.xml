@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docs on My New Hugo Site</title>
+    <link>http://example.org/docs/</link>
+    <description>Recent content in Docs on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 14 Mar 2023 09:46:21 +0000</lastBuildDate><atom:link href="http://example.org/docs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Download Controller Service</title>
+      <link>http://example.org/docs/services/dcs/</link>
+      <pubDate>Tue, 14 Mar 2023 09:46:21 +0000</pubDate>
+      
+      <guid>http://example.org/docs/services/dcs/</guid>
+      <description>Download Controller Service #  ghga-de/download-controller-service
+ghga/download-controller-service
+Summary #  Provided #  REST API #  This service provides a REST API with the following endpoints:
+   Method Path Consumers     GET /objects/{object_id}     Events #  This service publishes the following event types through a message broker:
+   Topic Type Consumers     file_downloads download_served    file_downloads file_registered    file_downloads unstaged_download_requested     Consumed #  REST API #  This service relies on the following REST endpoints:</description>
+    </item>
+    
+    <item>
+      <title>Encryption Key Store Service</title>
+      <link>http://example.org/docs/services/ekss/</link>
+      <pubDate>Tue, 14 Mar 2023 09:46:21 +0000</pubDate>
+      
+      <guid>http://example.org/docs/services/ekss/</guid>
+      <description>Encryption Key Store Service #  ghga-de/encryption-key-store-service
+ghga/encryption-key-store-service
+Summary #  Provided #  REST API #  This service provides a REST API with the following endpoints:
+   Method Path Consumers     POST /secrets    GET /secrets/{secret_id}/envelopes/{client_pk}     Events #  This service publishes the following event types through a message broker:
+   Topic Type Consumers    Consumed #  REST API #  This service relies on the following REST endpoints:</description>
+    </item>
+    
+    <item>
+      <title>Internal File Registry Service</title>
+      <link>http://example.org/docs/services/ifrs/</link>
+      <pubDate>Tue, 14 Mar 2023 09:46:21 +0000</pubDate>
+      
+      <guid>http://example.org/docs/services/ifrs/</guid>
+      <description>Internal File Registry Service #  ghga-de/internal-file-registry-service
+ghga/internal-file-registry-service
+Summary #  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pellentesque posuere ante, ac porttitor nulla eleifend quis. Mauris eget aliquam diam. Duis laoreet blandit luctus. Donec at lacus porta, bibendum lectus dignissim, eleifend est. Etiam sit amet blandit dui. Cras id ante et neque hendrerit vulputate non aliquam eros.
+Provided #  REST API #  This service provides a REST API with the following endpoints:</description>
+    </item>
+    
+    <item>
+      <title>Interrogation Room Service</title>
+      <link>http://example.org/docs/services/irs/</link>
+      <pubDate>Tue, 14 Mar 2023 09:46:21 +0000</pubDate>
+      
+      <guid>http://example.org/docs/services/irs/</guid>
+      <description>Interrogation Room Service #  ghga-de/interrogation-room-service
+ghga/interrogation-room-service
+Summary #  Provided #  REST API #  This service provides a REST API with the following endpoints:
+   Method Path Consumers    Events #  This service publishes the following event types through a message broker:
+   Topic Type Consumers     file_interrogation file_validation_success Internal File Registry Service   file_interrogation file_validation_failure Upload Controller Service    Consumed #  REST API #  This service relies on the following REST endpoints:</description>
+    </item>
+    
+    <item>
+      <title>Upload Controller Service</title>
+      <link>http://example.org/docs/services/ucs/</link>
+      <pubDate>Tue, 14 Mar 2023 09:46:21 +0000</pubDate>
+      
+      <guid>http://example.org/docs/services/ucs/</guid>
+      <description>Upload Controller Service #  ghga-de/upload-controller-service
+ghga/upload-controller-service
+Summary #  Provided #  REST API #  This service provides a REST API with the following endpoints:
+   Method Path Consumers     GET /files/{file_id}    POST /uploads    GET /uploads/{upload_id}    PATCH /uploads/{upload_id}    POST /uploads/{upload_id}/parts/{part_no}/signed_urls     Events #  This service publishes the following event types through a message broker:</description>
+    </item>
+    
+  </channel>
+</rss>
