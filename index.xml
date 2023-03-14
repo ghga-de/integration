@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My New Hugo Site</title>
-    <link>http://example.org/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <title>GHGA Integration Documentation</title>
+    <link>https://ghga-de.github.io/integration/</link>
+    <description>Recent content on GHGA Integration Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 14 Mar 2023 09:46:21 +0000</lastBuildDate><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 14 Mar 2023 10:59:12 +0000</lastBuildDate><atom:link href="https://ghga-de.github.io/integration/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Download Controller Service</title>
-      <link>http://example.org/docs/services/dcs/</link>
-      <pubDate>Tue, 14 Mar 2023 09:46:21 +0000</pubDate>
+      <link>https://ghga-de.github.io/integration/docs/services/dcs/</link>
+      <pubDate>Tue, 14 Mar 2023 10:59:12 +0000</pubDate>
       
-      <guid>http://example.org/docs/services/dcs/</guid>
+      <guid>https://ghga-de.github.io/integration/docs/services/dcs/</guid>
       <description>Download Controller Service #  ghga-de/download-controller-service
 ghga/download-controller-service
 Summary #  Provided #  REST API #  This service provides a REST API with the following endpoints:
@@ -22,10 +22,10 @@ Summary #  Provided #  REST API #  This service provides a REST API with the fol
     
     <item>
       <title>Encryption Key Store Service</title>
-      <link>http://example.org/docs/services/ekss/</link>
-      <pubDate>Tue, 14 Mar 2023 09:46:21 +0000</pubDate>
+      <link>https://ghga-de.github.io/integration/docs/services/ekss/</link>
+      <pubDate>Tue, 14 Mar 2023 10:59:12 +0000</pubDate>
       
-      <guid>http://example.org/docs/services/ekss/</guid>
+      <guid>https://ghga-de.github.io/integration/docs/services/ekss/</guid>
       <description>Encryption Key Store Service #  ghga-de/encryption-key-store-service
 ghga/encryption-key-store-service
 Summary #  Provided #  REST API #  This service provides a REST API with the following endpoints:
@@ -35,10 +35,10 @@ Summary #  Provided #  REST API #  This service provides a REST API with the fol
     
     <item>
       <title>Internal File Registry Service</title>
-      <link>http://example.org/docs/services/ifrs/</link>
-      <pubDate>Tue, 14 Mar 2023 09:46:21 +0000</pubDate>
+      <link>https://ghga-de.github.io/integration/docs/services/ifrs/</link>
+      <pubDate>Tue, 14 Mar 2023 10:59:12 +0000</pubDate>
       
-      <guid>http://example.org/docs/services/ifrs/</guid>
+      <guid>https://ghga-de.github.io/integration/docs/services/ifrs/</guid>
       <description>Internal File Registry Service #  ghga-de/internal-file-registry-service
 ghga/internal-file-registry-service
 Summary #  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pellentesque posuere ante, ac porttitor nulla eleifend quis. Mauris eget aliquam diam. Duis laoreet blandit luctus. Donec at lacus porta, bibendum lectus dignissim, eleifend est. Etiam sit amet blandit dui. Cras id ante et neque hendrerit vulputate non aliquam eros.
@@ -47,10 +47,10 @@ Provided #  REST API #  This service provides a REST API with the following endp
     
     <item>
       <title>Interrogation Room Service</title>
-      <link>http://example.org/docs/services/irs/</link>
-      <pubDate>Tue, 14 Mar 2023 09:46:21 +0000</pubDate>
+      <link>https://ghga-de.github.io/integration/docs/services/irs/</link>
+      <pubDate>Tue, 14 Mar 2023 10:59:12 +0000</pubDate>
       
-      <guid>http://example.org/docs/services/irs/</guid>
+      <guid>https://ghga-de.github.io/integration/docs/services/irs/</guid>
       <description>Interrogation Room Service #  ghga-de/interrogation-room-service
 ghga/interrogation-room-service
 Summary #  Provided #  REST API #  This service provides a REST API with the following endpoints:
@@ -60,10 +60,10 @@ Summary #  Provided #  REST API #  This service provides a REST API with the fol
     
     <item>
       <title>Upload Controller Service</title>
-      <link>http://example.org/docs/services/ucs/</link>
-      <pubDate>Tue, 14 Mar 2023 09:46:21 +0000</pubDate>
+      <link>https://ghga-de.github.io/integration/docs/services/ucs/</link>
+      <pubDate>Tue, 14 Mar 2023 10:59:12 +0000</pubDate>
       
-      <guid>http://example.org/docs/services/ucs/</guid>
+      <guid>https://ghga-de.github.io/integration/docs/services/ucs/</guid>
       <description>Upload Controller Service #  ghga-de/upload-controller-service
 ghga/upload-controller-service
 Summary #  Provided #  REST API #  This service provides a REST API with the following endpoints:

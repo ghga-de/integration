@@ -1,14 +1,14 @@
 {
-  "name": "My New Hugo Site",
-  "short_name": "My New Hugo Site",
-  "start_url": "/",
-  "scope": "/",
+  "name": "GHGA Integration Documentation",
+  "short_name": "GHGA Integration Documentation",
+  "start_url": "/integration/",
+  "scope": "/integration/",
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#000000",
   "icons": [
     {
-      "src": "/favicon.svg",
+      "src": "/integration/favicon.svg",
       "sizes": "512x512"
     }
   ]
