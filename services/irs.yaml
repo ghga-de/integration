@@ -1,7 +1,7 @@
 shortname: irs
 name: interrogation-room-service
 summary: ""
-version: main
+version: 0.0.0-19-f87dd1b-main
 api:
   events:
     consumes:

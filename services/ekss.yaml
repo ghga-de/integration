@@ -1,7 +1,7 @@
 shortname: ekss
 name: encryption-key-store-service
 summary: ""
-version: main
+version: 0.0.0-22-4d92c54-main
 api:
   rest:
     produces:
