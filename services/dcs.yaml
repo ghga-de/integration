@@ -1,7 +1,7 @@
 shortname: dcs
 name: download-controller-service
 summary: ""
-version: main
+version: 0.4.0-14-g4315c66-main
 api:
   events:
     consumes:

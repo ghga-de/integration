@@ -1,5 +1,5 @@
 {
     "yaml.schemas": {
-        "schema.json": "services/*.yaml"
+        "schema.json" : "*.yaml"
     }
 }

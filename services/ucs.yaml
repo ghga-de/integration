@@ -1,7 +1,7 @@
 shortname: ucs
 name: upload-controller-service
 summary: ""
-version: main
+version: 0.3.0-18-g0b8060e-main
 api:
   events:
     consumes:
