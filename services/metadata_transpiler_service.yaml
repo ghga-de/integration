@@ -1,4 +1,4 @@
-shortname: mts
+shortname: metadata_transpiler_service
 name: metadata-transpiler-service
 summary: "The Metadata Transpiler Service (MTS) transforms the submitted 
           metadata into a Submission JSON, which can be later submitted 

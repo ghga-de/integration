@@ -1,4 +1,4 @@
-shortname: as
+shortname: auth_service
 name: auth-service
 summary: "This service contains two sub-services for the management, authentication 
           and authorization of users of the GHGA data portal. The `auth_adapter` 

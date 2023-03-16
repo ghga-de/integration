@@ -1,4 +1,4 @@
-shortname: mrs
+shortname: metadata_repository_service
 name: metadata-repository-service
 summary: "The Metadata Repository Service (MRS) is storing study or 
           dataset-related metadata and implements a RESTful API for 
