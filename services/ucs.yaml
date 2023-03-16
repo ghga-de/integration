@@ -1,0 +1,50 @@
+shortname: ucs
+name: upload-controller-service
+summary: ""
+version: 0.3.0-18-g0b8060e-main
+api:
+  events:
+    consumes:
+      - topic: metadata
+        type: file_metadata_upserts
+        config: file_metadata_event
+        description: New or changed metadata on files that shall be registered for uploaded
+      - topic: internal_file_registry
+        type: file_registered
+        config: upload_accepted_event
+        description: Indicates that an upload was by downstream services
+      - topic: file_interrogation
+        type: file_validation_failure
+        config: upload_rejected_event
+        description: Informing about rejection of an upload by downstream services due to validation failure
+    produces:
+      - topic: file_uploads
+        type: file_upload_received
+        config: upload_received_event
+        description: Informing about new file uploads
+  rest:
+    produces:
+      - method: GET
+        path: /files/{file_id}
+        authentication: true
+      - method: POST
+        path: /uploads
+        authentication: true
+      - method: GET
+        path: /uploads/{upload_id}
+        authentication: true
+      - method: PATCH
+        path: /uploads/{upload_id}
+        authentication: true
+      - method: POST
+        path: /uploads/{upload_id}/parts/{part_no}/signed_urls
+        authentication: true
+storage:
+  s3:
+    - bucket: inbox
+      mode: read
+    - bucket: staging
+      mode: read
+  mongodb:
+    - db_name: ucs
+      mode: read-write

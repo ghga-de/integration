@@ -1,0 +1,42 @@
+shortname: ifrs
+name: internal-file-registry-service
+summary: |
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+  pellentesque posuere ante, ac porttitor nulla eleifend quis. Mauris eget
+  aliquam diam. Duis laoreet blandit luctus. Donec at lacus porta, bibendum
+  lectus dignissim, eleifend est. Etiam sit amet blandit dui. Cras id ante et
+  neque hendrerit vulputate non aliquam eros.
+version: 0.3.0-20-g82f39eb-main
+api:
+  events:
+    produces:
+      - topic: internal_file_registry
+        type: file_registered
+        config: file_registered_event
+        description: Indicating that a new file has been internally registered
+      - topic: internal_file_registry
+        type: file_staged_for_download
+        config: file_staged_event
+        description: Indicating that a new file has been internally registered
+    consumes:
+      - topic: file_interrogation
+        type: file_validation_success
+        config: files_to_register
+        description: Informing about new files to register
+      - topic: file_downloads
+        type: file_stage_requested
+        config: files_to_stage
+        description: Informing about a file to be staged
+storage:
+  mongodb:
+    - db_name: ifrs
+      mode: read-write
+  s3:
+    - bucket: outbox
+      mode: read
+    - bucket: inbox
+      mode: read
+    - bucket: permanent
+      mode: read
+    - bucket: staging
+      mode: read

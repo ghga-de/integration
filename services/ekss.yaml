@@ -1,0 +1,22 @@
+shortname: ekss
+name: encryption-key-store-service
+summary: ""
+version: 0.0.0-22-4d92c54-main
+api:
+  rest:
+    produces:
+      - path: /secrets
+        method: POST
+        authentication: true
+      - path: /secrets/{secret_id}/envelopes/{client_pk}
+        method: GET
+        authentication: true
+storage:
+  vault:
+    - path: /cryptkeys
+      mode: read-write
+extra_config:
+  - name: server_private_key
+    description: The server private key
+  - name: server_public_key
+    description: The server public key

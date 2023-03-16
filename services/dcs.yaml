@@ -1,0 +1,36 @@
+shortname: dcs
+name: download-controller-service
+summary: ""
+version: 0.4.0-14-g4315c66-main
+api:
+  events:
+    consumes:
+      - topic: internal_file_registry
+        type: file_registered
+        config: files_to_register
+        description: Informing about new files that shall be made available for download
+    produces:
+      - topic: file_downloads
+        type: download_served
+        config: download_served_event
+        description: Indicating that a download of a specified file happened
+      - topic: file_downloads
+        type: file_registered
+        config: file_registered_event
+        description: Indicating that a file has been registered for download
+      - topic: file_downloads
+        type: unstaged_download_requested
+        config: unstaged_download_event
+        description: Indicating that a download was requested for a file that is not yet available in the outbox
+  rest:
+    produces:
+      - path: /objects/{object_id}
+        method: GET
+        authentication: true
+storage:
+  s3:
+    - bucket: outbox
+      mode: read-write
+  mongodb:
+    - db_name: dcs
+      mode: read-write
