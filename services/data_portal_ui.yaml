@@ -5,6 +5,15 @@ version: main
 api:
   rest:
     consumes:
+      - service: metadata_search_service
+        path:  /rpc/search
+        method: POST
+      - service: metadata_repository_service
+        path: /datasets/{dataset_id}
+        method: GET
+      - service: metadata_repository_service
+        path: /dataset_summary/{dataset_id}
+        method: GET
       - service: metadata_repository_service
         path: /metadata_summary
         method: GET
