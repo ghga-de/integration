@@ -7,7 +7,7 @@ summary: "The Interrogation Room Service (IRS) interfaces with the
           the encrypted file content, validates the checksum over the 
           unencrypted file content (in memory) and initiates transfer 
           of the encrypted file content to its permanent storage."
-version: main
+version: 0.0.0-19-f87dd1b-main
 api:
   events:
     consumes:

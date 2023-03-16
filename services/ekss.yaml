@@ -3,7 +3,7 @@ name: encryption-key-store-service
 summary: "The Encryption Key Store Service (EKS) handles storage and retrieval 
           of encryption/decryption secrets, extraction of information from and 
           creation of personalized Crypt4GH file envelopes."
-version: main
+version: 0.0.0-22-4d92c54-main
 api:
   rest:
     produces:

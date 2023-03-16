@@ -7,7 +7,7 @@ summary: "This service acts as a registry for the internal location and
           to other services (i.e. not S3, e.g. a flat-file system), 
           this service SHOULD stage the file into an accessible S3-based 
           storage system and serve the location to the staged file."
-version: main
+version: 0.3.0-20-g82f39eb-main
 api:
   events:
     produces:
