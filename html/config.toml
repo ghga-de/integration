@@ -1,0 +1,3 @@
+baseURL = 'https://ghga-de.github.io/integration/'
+languageCode = 'en-us'
+title = 'GHGA Integration Documentation'
