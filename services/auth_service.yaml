@@ -6,7 +6,7 @@ summary: "This service contains two sub-services for the management, authenticat
           via the ExtAuth protocol. The `user_management` subpackage contains the 
           user data management service. The setting `run_auth_adapter` can be used to 
           determine which of the two services will be started."
-version: main
+version: 0.0.0-58-fc1e78f-main
 api:
   rest:
     produces:

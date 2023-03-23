@@ -4,7 +4,7 @@ summary: "The Metadata Transpiler Service (MTS) transforms the submitted
           metadata into a Submission JSON, which can be later submitted 
           to Metadata Repository Service. At the moment MTS can convert 
           the metadata submitted in the user friendly spreadsheet form to JSON."
-version: main
+version: 0.0.0-16-f21ccf8-main
 api:
   rest:
     produces:

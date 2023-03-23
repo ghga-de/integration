@@ -1,7 +1,7 @@
 shortname: metadata_catalog
 name: metadata-catalog
 summary: "GHGA Metadata Catalog front end interface"
-version: main
+version: 0.0.0-56-137454b-main
 api:
   rest:
     consumes:

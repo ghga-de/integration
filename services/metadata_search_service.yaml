@@ -2,7 +2,7 @@ shortname: metadata_search_service
 name: metadata-search-service
 summary: "The Metadata Search Service (MSS) is a service for providing 
           a unified search interface over a metadata store."
-version: main
+version: 0.0.0-42-2ff364a-main
 api:
   rest:
     produces:

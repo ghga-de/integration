@@ -1,7 +1,7 @@
 shortname: data_portal_ui
 name: data-portal-ui
 summary: "GHGA Data Portal front end interface"
-version: main
+version: 0.0.0-190-4b425e8-main
 api:
   rest:
     consumes:
