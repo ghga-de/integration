@@ -1,9 +1,9 @@
 # Integration
-Schema repository for GHGA microservice landscape 
+Repository for GHGA microservice manifests.
 
-The Integration repository contains service schemas in YAML format for each microservice within the [GHGA](https://github.com/ghga-de). 
+The Integration repository contains service manifests in YAML format for each microservice within the [GHGA](https://github.com/ghga-de). 
 
-Service schemas follow [schema.json](https://github.com/ghga-de/integration/blob/9c8d1c80bab3af0062ac0a59f1117252bfe7285e/schema.json) and serve multiple purposes, including service logic validation, documentation and visualization of the service landscape. As well as supporting the (semi) automatic generation of helm charts, docker-compose files, etc.
+Service manifests follow [schema.json](https://github.com/ghga-de/integration/blob/9c8d1c80bab3af0062ac0a59f1117252bfe7285e/schema.json) and serve multiple purposes, including service logic validation, documentation and visualization of the service landscape. As well as supporting the (semi) automatic generation of helm charts, docker-compose files, etc.
 
 You can access auto-generated service documentation at https://ghga-de.github.io/integration.
 
@@ -20,19 +20,19 @@ You can access auto-generated service documentation at https://ghga-de.github.io
 ```
 **schema.json**: JSON schema used to validate the service schema.
 
-**services**: YAML files containing service schemas
+**services**: Service manifests in YAML format
 
-**html**: configuration for auto-generated web interface
+**html**: Configuration for auto-generated web interface
 
 ## Usage
-The service schemas in this repository have several use cases, including:
+The service manifests in this repository have several use cases, including:
 
 - Facilitating service logic validation.
 - Enabling human-readable documentation and visualization of the service landscape.
 - Supporting the (semi) automatic generation of helm charts, docker-compose files, and other such resources.
 
 ### [ghga-devutil](https://github.com/ghga-de/ghga-devutil)
-The **ghga-devutil** tool is designed to provide a proof-of-concept parser for service schemas that can annotate and generate markdown files. It can also build a web interface from schemas that serves as human-readable documentation for the GHGA service landscape. 
+The **ghga-devutil** is a command-line tool designed to provide a proof-of-concept parser for manifests. It annotates services and generate markdown files. It can also build a web interface from manifests that serves as human-readable documentation for the GHGA service landscape. 
 
 For more information, please visit [ghga-de/ghga-devutil](https://github.com/ghga-de/ghga-devutil)
 
