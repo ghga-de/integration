@@ -42,17 +42,39 @@ storage:
     - db_name: auth_service
       mode: read-write
 extra_config:
-    - name: auth_int_keys
-      description: Internal public key for user management
+    - name: run_auth_adapter
+      description: Boolean for whether running Auth Adapter
+    - name: api_ext_path
+      description: External API path for the user management as seen by the auth adapter
+    - name: auth_key
+      description: Internal public key for user management (key pair for auth adapter)
+    - name: auth_algs
+      description: Allowed algorithms for signing internal tokens
+    - name: auth_check_claims
+      description: Internal claims that shall be verified
+    - name: auth_map_claims
+      description: Mapping of claims to the internal auth context
     - name: auth_ext_keys
-      description: External public key set for auth adapter
+      description: External public key set for auth adapter (not used for user management)
     - name: auth_ext_algs
       description: Allowed algorithms for signing external tokens
     - name: basic_auth_user
-      description: User(s) for basic authentication
+      description: User(s) and password(s) for basic authentication
     - name: basic_auth_pwd
-      description: Password(s) for basic authentication
+      description: Password(s) for basic authentication if not specified above
+    - name: basic_auth_realm
+      description: Realm for basic authentication
     - name: oidc_authority_url
-      description: OIDC Authority Url
+      description: URL for external token content for validation in auth adapter
+    - name: oidc_userinfo_endpoint
+      description: Endpoint for external token content for validation in auth adapter
     - name: oidc_client_id
-      description: OIDC Client Id
+      description: Client ID for external token content for validation in auth adapter
+    - name: organization_url
+      description: The URL used as source for internal claims
+    - name: users_collection
+      description: Database collection for Users
+    - name: claims_collection
+      description: Database collection for claims
+    - name: db_url
+      description: Database connection string for MongoDB
