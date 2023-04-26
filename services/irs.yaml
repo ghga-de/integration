@@ -20,7 +20,7 @@ api:
         description: Informing about the failure of a file validation
   rest:
     consumes:
-      - service: eks
+      - service: ekss
         path: /secrets
         method: POST
 storage:
