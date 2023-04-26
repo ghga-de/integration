@@ -13,7 +13,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Install gdevutil
+      - name: Install ghga-devutil
         run: pip install git+https://github.com/ghga-de/ghga-devutil.git@main
       
       - name: Install hugo
@@ -23,7 +23,7 @@ jobs:
         run: mkdir -p html/themes && git clone --depth 1 -b master https://github.com/alex-shpak/hugo-book html/themes/hugo-book
 
       - name: Generate markdown files from yaml
-        run: mkdir -p html/content/docs/services && gdevutil markdown services/*.yaml html/content/docs/services
+        run: mkdir -p html/content/docs/services && ghga-devutil markdown services/*.yaml html/content/docs/services
       
       - name: Build site
         run: cd html && hugo --theme hugo-book
