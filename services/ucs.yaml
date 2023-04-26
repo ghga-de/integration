@@ -1,6 +1,6 @@
 shortname: ucs
 name: upload-controller-service
-summary: ""
+summary: "The Upload-Controller Service (UCS) manages uploads to a S3 inbox bucket."
 version: 0.3.0-18-g0b8060e-main
 api:
   events:
