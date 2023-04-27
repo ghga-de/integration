@@ -6,7 +6,7 @@
     <description>Recent content in Docs on GHGA Integration Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 27 Apr 2023 08:07:15 +0000</lastBuildDate><atom:link href="https://ghga-de.github.io/integration/docs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 27 Apr 2023 08:08:19 +0000</lastBuildDate><atom:link href="https://ghga-de.github.io/integration/docs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Service Communications</title>
       <link>https://ghga-de.github.io/integration/docs/services/service_communications/</link>
@@ -20,7 +20,7 @@
     <item>
       <title>Download Controller Service</title>
       <link>https://ghga-de.github.io/integration/docs/services/dcs/</link>
-      <pubDate>Thu, 27 Apr 2023 08:07:15 +0000</pubDate>
+      <pubDate>Thu, 27 Apr 2023 08:08:19 +0000</pubDate>
       
       <guid>https://ghga-de.github.io/integration/docs/services/dcs/</guid>
       <description>Download Controller Service #  0.4.0-14-g4315c66-main
@@ -35,7 +35,7 @@ Open in Swagger Editor
     <item>
       <title>Encryption Key Store Service</title>
       <link>https://ghga-de.github.io/integration/docs/services/ekss/</link>
-      <pubDate>Thu, 27 Apr 2023 08:07:15 +0000</pubDate>
+      <pubDate>Thu, 27 Apr 2023 08:08:19 +0000</pubDate>
       
       <guid>https://ghga-de.github.io/integration/docs/services/ekss/</guid>
       <description>Encryption Key Store Service #  0.0.0-22-4d92c54-main
@@ -49,7 +49,7 @@ Open in Swagger Editor
     <item>
       <title>Internal File Registry Service</title>
       <link>https://ghga-de.github.io/integration/docs/services/ifrs/</link>
-      <pubDate>Thu, 27 Apr 2023 08:07:15 +0000</pubDate>
+      <pubDate>Thu, 27 Apr 2023 08:08:19 +0000</pubDate>
       
       <guid>https://ghga-de.github.io/integration/docs/services/ifrs/</guid>
       <description>Internal File Registry Service #  0.3.0-20-g82f39eb-main
@@ -62,7 +62,7 @@ Provided #  REST API #  This service provides no REST API endpoints</description
     <item>
       <title>Interrogation Room Service</title>
       <link>https://ghga-de.github.io/integration/docs/services/irs/</link>
-      <pubDate>Thu, 27 Apr 2023 08:07:15 +0000</pubDate>
+      <pubDate>Thu, 27 Apr 2023 08:08:19 +0000</pubDate>
       
       <guid>https://ghga-de.github.io/integration/docs/services/irs/</guid>
       <description>Interrogation Room Service #  0.0.0-19-f87dd1b-main
@@ -76,7 +76,7 @@ Events #  This service publishes the following event types through a message bro
     <item>
       <title>Upload Controller Service</title>
       <link>https://ghga-de.github.io/integration/docs/services/ucs/</link>
-      <pubDate>Thu, 27 Apr 2023 08:07:15 +0000</pubDate>
+      <pubDate>Thu, 27 Apr 2023 08:08:19 +0000</pubDate>
       
       <guid>https://ghga-de.github.io/integration/docs/services/ucs/</guid>
       <description>Upload Controller Service #  0.3.0-18-g0b8060e-main
