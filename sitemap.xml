@@ -2,9 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://ghga-de.github.io/integration/categories/</loc>
+    <loc>https://ghga-de.github.io/integration/docs/services/service_communications/</loc>
+  </url><url>
+    <loc>https://ghga-de.github.io/integration/docs/</loc>
+    <lastmod>2023-04-27T08:07:15+00:00</lastmod>
+  </url><url>
+    <loc>https://ghga-de.github.io/integration/docs/services/dcs/</loc>
+    <lastmod>2023-04-27T08:07:15+00:00</lastmod>
+  </url><url>
+    <loc>https://ghga-de.github.io/integration/docs/services/ekss/</loc>
+    <lastmod>2023-04-27T08:07:15+00:00</lastmod>
   </url><url>
     <loc>https://ghga-de.github.io/integration/</loc>
+    <lastmod>2023-04-27T08:07:15+00:00</lastmod>
+  </url><url>
+    <loc>https://ghga-de.github.io/integration/docs/services/ifrs/</loc>
+    <lastmod>2023-04-27T08:07:15+00:00</lastmod>
+  </url><url>
+    <loc>https://ghga-de.github.io/integration/docs/services/irs/</loc>
+    <lastmod>2023-04-27T08:07:15+00:00</lastmod>
+  </url><url>
+    <loc>https://ghga-de.github.io/integration/docs/services/ucs/</loc>
+    <lastmod>2023-04-27T08:07:15+00:00</lastmod>
+  </url><url>
+    <loc>https://ghga-de.github.io/integration/categories/</loc>
   </url><url>
     <loc>https://ghga-de.github.io/integration/tags/</loc>
   </url>
