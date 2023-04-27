@@ -18,12 +18,9 @@ jobs:
       
       - name: Install hugo
         run: sudo apt-get install -y hugo 
-
-      - name: Load hugo theme
-        run: mkdir -p html/themes && git clone --depth 1 -b master https://github.com/alex-shpak/hugo-book html/themes/hugo-book
-
-      - name: Generate markdown files from yaml
-        run: mkdir -p html/content/docs/services && ghga-devutil markdown services/*.yaml html/content/docs/services
+        
+      - name: Run ghga-devutil to build web content
+        run: ghga-devutil html services/*.yaml html
       
       - name: Build site
         run: cd html && hugo --theme hugo-book
