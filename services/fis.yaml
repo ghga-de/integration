@@ -1,0 +1,20 @@
+shortname: fis
+name: file-ingest-service
+version: 0.1.2
+api:
+  rest:
+    produces:
+      public: true
+      gateway_prefix: /api/fis
+  events:
+    produces:
+      validation_success:
+        config: publisher_type
+        topic_config: publisher_topic
+storage:
+  vault:
+    - path: /ekss
+      mode: read-write
+extra_config:
+  source_bucket_id:
+    value: staging

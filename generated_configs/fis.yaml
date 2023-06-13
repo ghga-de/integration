@@ -1,0 +1,25 @@
+api_root_path: /
+auto_reload: false
+cors_allow_credentials: <Please fill>
+cors_allowed_headers: <Please fill>
+cors_allowed_methods: <Please fill>
+cors_allowed_origins: <Please fill>
+debug_vault: false
+docs_url: /docs
+host: 127.0.0.1
+kafka_servers: <Please fill>
+log_level: info
+openapi_url: /openapi.json
+port: 8080
+private_key: <Please fill>
+publisher_topic: interrogations
+publisher_type: validation_success
+service_instance_id: <Please fill>
+service_name: fis
+source_bucket_id: staging
+token_hashes: <Please fill>
+vault_host: <Please fill>
+vault_port: <Please fill>
+vault_role_id: <Please fill>
+vault_secret_id: <Please fill>
+workers: 1

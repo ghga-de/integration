@@ -1,0 +1,25 @@
+aws_config_ini: <Please fill>
+db_connection_str: <Please fill>
+db_name: ifrs
+file_deleted_event_topic: internal_registrations
+file_deleted_event_type: internal_file_deleted
+file_registered_event_topic: internal_registrations
+file_registered_event_type: internal_file_registered
+file_staged_event_topic: internal_registrations
+file_staged_event_type: internal_file_staged
+files_to_delete_topic: purges
+files_to_delete_type: files_to_delete
+files_to_register_topic: interrogations
+files_to_register_type: validation_success
+files_to_stage_topic: downloads
+files_to_stage_type: unstaged_drs_object_requested
+kafka_servers: <Please fill>
+outbox_bucket: outbox
+permanent_bucket: permanent
+s3_access_key_id: <Please fill>
+s3_endpoint_url: <Please fill>
+s3_secret_access_key: <Please fill>
+s3_session_token: <Please fill>
+service_instance_id: <Please fill>
+service_name: internal_file_registry
+staging_bucket: staging
