@@ -1,0 +1,33 @@
+shortname: ifrs
+name: internal-file-registry-service
+version: 0.4.0
+api:
+  events:
+    produces:
+      internal_file_registered:
+        config_parameter: file_registered_event_type
+        topic_config_parameter: file_registered_event_topic
+      internal_file_staged:
+        config_parameter: file_staged_event_type
+        topic_config_parameter: file_staged_event_topic
+      internal_file_deleted:
+        config_parameter: file_deleted_event_type
+        topic_config_parameter: file_deleted_event_topic
+    consumes:
+      validation_success:
+        config_parameter: files_to_register_type
+        topic_config_parameter: files_to_register_topic
+      unstaged_drs_object_requested:
+        config_parameter: files_to_stage_type
+        topic_config_parameter: files_to_stage_topic
+      files_to_delete:
+        config_parameter: files_to_delete_type
+        topic_config_parameter: files_to_delete_topic
+storage:
+  mongodb:
+    db_name: ifrs
+    mode: read-write
+  s3:
+    - bucket: permanent
+      config_parameter: permanent_bucket
+      mode: read

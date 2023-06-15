@@ -1,17 +1,18 @@
 api_root_path: /
 api_route: /ga4gh/drs/v1
-auth_algs: <Please fill - must matched with the algorithm used to create signing credentials
+auth_algs: <Please fill - Must matched with the algorithm used to create signing credentials
   of work package service, not the auth adapter>
 auth_check_claims:
   email: null
   exp: null
   iat: null
   name: null
-auth_key: <Please fill - must matched to signing credentials of work package service,
+auth_key: <Please fill - Must matched to signing credentials of work package service,
   not the auth adapter>
 auth_map_claims: {}
 auto_reload: false
 aws_config_ini: <Please fill>
+cache_timeout: 7
 cors_allow_credentials: <Please fill>
 cors_allowed_headers: <Please fill>
 cors_allowed_methods: <Please fill>
@@ -22,7 +23,7 @@ docs_url: /docs
 download_served_event_topic: downloads
 download_served_event_type: drs_object_served
 drs_server_uri: <Please fill>
-ekss_base_url: Please fill with api url for service ekss
+ekss_base_url: <Please fill with api url for service ekss>
 file_deleted_event_topic: downloads
 file_deleted_event_type: drs_object_deleted
 file_registered_event_topic: downloads

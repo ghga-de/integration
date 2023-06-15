@@ -9,8 +9,8 @@ api:
   events:
     produces:
       validation_success:
-        config: publisher_type
-        topic_config: publisher_topic
+        config_parameter: publisher_type
+        topic_config_parameter: publisher_topic
 storage:
   vault:
     - path: /ekss
