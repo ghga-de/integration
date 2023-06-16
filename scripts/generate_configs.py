@@ -175,7 +175,7 @@ def get_config_from_manifest(
     if manifest.extra_config:
         for config_name, details in manifest.extra_config.items():
             config[config_name] = (
-                details.value or f"<Please fill - {details.value_instructions}>"
+                details.value if details.value is not None else f"<Please fill - {details.value_instructions}>"
             )
 
     return config

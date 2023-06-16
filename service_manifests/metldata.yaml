@@ -1,0 +1,17 @@
+shortname: metldata
+name: metldata
+version: 0.3.0
+api: 
+  rest:
+    produces:
+      public: true
+      gateway_prefix: /api/metldata
+storage:
+  mongodb:
+    db_name: dev_db
+    mode: read-write
+extra_config:
+  artifact_infos:
+    value: []
+  loader_token_hashes:
+    value_instructions: The tokens must be the loader token generated using the data steward kit.
