@@ -8,7 +8,7 @@ api:
       gateway_prefix: /api/metldata
 storage:
   mongodb:
-    db_name: dev_db
+    db_name: metadata_artifacts
     mode: read-write
 extra_config:
   artifact_infos:
