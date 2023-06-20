@@ -6,7 +6,7 @@ cors_allowed_headers: <Please fill>
 cors_allowed_methods: <Please fill>
 cors_allowed_origins: <Please fill>
 db_connection_str: <Please fill>
-db_name: dev_db
+db_name: metadata_artifacts
 docs_url: /docs
 host: 127.0.0.1
 loader_token_hashes: <Please fill - The tokens must be the loader token generated
