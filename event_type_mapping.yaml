@@ -1,0 +1,11 @@
+notification: notifications
+drs_object_served: downloads
+drs_object_registered: downloads
+unstaged_drs_object_requested: downloads
+drs_object_deleted: downloads
+files_to_delete: purges
+validation_success: interrogations
+internal_file_registered: internal_registrations
+internal_file_staged: internal_registrations
+internal_file_deleted: internal_registrations
+artifacts.embedded_public: artifacts.embedded_public

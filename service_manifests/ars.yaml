@@ -1,0 +1,28 @@
+shortname: ars
+name: access-request-service
+version: 0.1.1
+api: 
+  rest:
+    produces:
+      public: true
+      gateway_prefix: /api/ars
+    consumes:
+      auth_service:
+        config_parameter: download_access_url
+        allowed_paths:
+          /users:
+            - post
+  events:
+      produces:
+        notification:
+          config_parameter: notification_event_type
+          topic_config_parameter: notification_event_topic
+storage:
+  mongodb:
+    db_name: ars
+    mode: read-write
+extra_config:
+  auth_key:
+    value_instructions: Must matched to signing credentials of auth adapter
+  auth_algs:
+    value_instructions:  Must matched with the algorithm used to create signing credentials of auth adapter

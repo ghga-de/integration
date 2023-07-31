@@ -1,0 +1,40 @@
+shortname: ars # should be same with python package name and manifest file name
+name: access-request-service # should be same with service repository name
+version: 0.1.1 # release of service
+api: 
+  rest: # this key is optional, only if there is rest api
+        # put clear explanation about below comments in doc
+    produces: # read the service openapi.yaml for endpoints and details
+      public: true # indicating whether the service api is public
+      gateway_prefix: '/api/ars' # no gateway_prefix here if public false
+    consumes:
+      dcs: # producers service name, if no endpoints specified that means all endpoints
+        config_parameter: dcs_base_url # config parameter name
+        allowed_paths: # optional, if some endpoints are allowed only
+          /users: # endpoint, same as in openapi.yaml
+            - methods # optional, if not specified that means all methods
+  events:
+      produces:
+        notification: # notification_event_type value
+          config_parameter: notification_event_type  # config parameter name
+          topic_config_parameter: notification_event_topic  # config parameter name
+          # for the value of notification_event_topic use the event_type_mapping.yaml
+          # mapping format: <notification_event_type value>:<notification_event_topic value>
+          # e.g. notification: notifications
+storage:
+  s3: # only if service requires s3 access, list of buckets used
+    - bucket: outbox # config parameter (in this case outbox_bucket) value
+      config_parameter: outbox_bucket  # config parameter name
+      mode: read-write
+  mongodb: # only if service requires mongodb database
+    db_name: dcs # config parameter name is 'db_name' and the value is 'dcs'
+    mode: read-write
+  vault: # only if service requires vault
+    - path: /ekss # this is a deployment detail, not a config parameter
+      mode: read-write
+extra_config: # only if there important config for integration
+  # read service config_schema for config details
+  auth_key: # config parameter name
+    # value or value_instructions
+    value_instructions:  # if there is specific instructions on how to set
+    value: # if there is predefined value

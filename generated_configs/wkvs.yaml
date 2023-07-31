@@ -1,0 +1,17 @@
+api_root_path: /
+auto_reload: false
+cors_allow_credentials: <Please fill>
+cors_allowed_headers: <Please fill>
+cors_allowed_methods: <Please fill>
+cors_allowed_origins: <Please fill>
+crypt4gh_public_key: <Please fill - The GHGA crypt4gh public key>
+dcs_api_url: <Please fill with api url for service dcs>
+docs_url: /docs
+host: 127.0.0.1
+log_level: info
+openapi_url: /openapi.json
+port: 8080
+service_name: wkvs
+ucs_api_url: <Please fill with api url for service ucs>
+workers: 1
+wps_api_url: <Please fill with api url for service wps>

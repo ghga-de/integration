@@ -1,0 +1,7 @@
+#!/bin/bash
+# install service in dev container
+
+cd /workspace
+
+# install or upgrade dependencies for development and testing
+pip install -r requirements.txt

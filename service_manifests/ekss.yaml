@@ -1,0 +1,11 @@
+shortname: ekss
+name: encryption-key-store-service
+version: 0.3.5
+api:
+  rest:
+    produces:
+      public: false
+storage:
+  vault:
+    - path: /ekss
+      mode: read-write

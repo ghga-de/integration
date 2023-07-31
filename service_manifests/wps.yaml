@@ -1,0 +1,27 @@
+shortname: wps
+name: work-package-service
+version: 0.1.3
+api:  
+  rest:
+    produces:
+      public: true
+      gateway_prefix: /api/wps
+    consumes:
+      auth_service:
+        config_parameter: download_access_url
+  events:
+    consumes:
+      artifacts.embedded_public:
+        config_parameter: dataset_overview_event_type
+        topic_config_parameter: dataset_overview_event_topic
+storage:
+  mongodb:
+    db_name: wps
+    mode: read-write
+extra_config:
+  auth_key:
+    value_instructions: Must matched to signing credentials of auth adapter
+  auth_algs:
+    value_instructions: Must matched with the algorithm used to create signing credentials of auth adapter
+  work_package_signing_key:
+    value_instructions: This is a specials signing key just for the work package service

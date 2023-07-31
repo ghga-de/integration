@@ -1,0 +1,47 @@
+shortname: dcs
+name: download-controller-service
+version: 0.6.4
+api: 
+  rest:
+    produces:
+      public: true
+      gateway_prefix: /api/dcs
+    consumes:
+      ekss:
+        config_parameter: ekss_base_url
+  events:
+    produces:
+      drs_object_served:
+        config_parameter: download_served_event_type
+        topic_config_parameter: download_served_event_topic
+      drs_object_registered:
+        config_parameter: file_registered_event_type
+        topic_config_parameter: file_registered_event_topic
+      unstaged_drs_object_requested:
+        config_parameter: unstaged_download_event_type
+        topic_config_parameter: unstaged_download_event_topic
+      drs_object_deleted:
+        config_parameter: file_deleted_event_type
+        topic_config_parameter: file_deleted_event_topic
+    consumes:
+      internal_file_registered:
+        config_parameter: files_to_register_type
+        topic_config_parameter: files_to_register_topic
+      files_to_delete:
+        config_parameter: files_to_delete_type
+        topic_config_parameter: files_to_delete_topic
+storage:
+  s3:
+    - bucket: outbox
+      config_parameter: outbox_bucket
+      mode: read-write
+  mongodb:
+    db_name: dcs
+    mode: read-write
+extra_config:
+  auth_key:
+    value_instructions: Must matched to signing credentials of work package service, not the auth adapter
+  auth_algs:
+    value_instructions: Must matched with the algorithm used to create signing credentials of work package service, not the auth adapter
+  presigned_url_expires_after:
+    value: 30

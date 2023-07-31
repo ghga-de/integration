@@ -1,0 +1,20 @@
+api_root_path: /
+auto_reload: false
+cors_allow_credentials: <Please fill>
+cors_allowed_headers: <Please fill>
+cors_allowed_methods: <Please fill>
+cors_allowed_origins: <Please fill>
+debug_vault: false
+docs_url: /docs
+host: 127.0.0.1
+log_level: info
+openapi_url: /openapi.json
+port: 8080
+server_private_key: <Please fill>
+server_public_key: <Please fill>
+service_name: encryption_key_store
+vault_host: <Please fill>
+vault_port: <Please fill>
+vault_role_id: <Please fill>
+vault_secret_id: <Please fill>
+workers: 1

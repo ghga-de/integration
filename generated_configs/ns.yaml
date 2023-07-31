@@ -1,0 +1,13 @@
+from_address: <Please fill>
+html_email_template: <Please fill - Check example config in service repo.>
+kafka_servers: <Please fill>
+login_password: <Please fill>
+login_user: <Please fill>
+notification_event_topic: notifications
+notification_event_type: notification
+plaintext_email_template: <Please fill - Check example config in service repo.>
+service_instance_id: <Please fill>
+service_name: ns
+smtp_host: <Please fill>
+smtp_port: <Please fill>
+use_starttls: true
