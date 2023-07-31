@@ -1,0 +1,15 @@
+shortname: ns
+name: notification-service
+version: 0.1.2
+api:
+  events:
+    consumes:
+      notification:
+        config_parameter: notification_event_type
+        topic_config_parameter: notification_event_topic
+
+extra_config:
+  html_email_template: 
+    value_instructions: Check example config in service repo.
+  plaintext_email_template:
+    value_instructions: Check example config in service repo.

@@ -1,0 +1,17 @@
+api_root_path: /
+auto_reload: false
+cors_allow_credentials: <Please fill>
+cors_allowed_headers: <Please fill>
+cors_allowed_methods: <Please fill>
+cors_allowed_origins: <Please fill>
+db_connection_str: <Please fill>
+db_name: mass
+docs_url: /docs
+host: 127.0.0.1
+log_level: info
+openapi_url: /openapi.json
+port: 8080
+searchable_classes: <Please fill - Searchable artifact or resource types. Check service
+  config schema.>
+service_name: mass
+workers: 1

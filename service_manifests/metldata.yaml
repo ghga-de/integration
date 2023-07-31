@@ -1,6 +1,6 @@
 shortname: metldata
 name: metldata
-version: 0.3.0
+version: 0.3.7
 api: 
   rest:
     produces:

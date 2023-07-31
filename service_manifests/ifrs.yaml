@@ -31,3 +31,12 @@ storage:
     - bucket: permanent
       config_parameter: permanent_bucket
       mode: read
+    - bucket: outbox
+      config_parameter: outbox_bucket
+      mode: read
+    - bucket: inbox
+      config_parameter: inbox_bucket
+      mode: read
+    - bucket: staging
+      config_parameter: staging_bucket
+      mode: read

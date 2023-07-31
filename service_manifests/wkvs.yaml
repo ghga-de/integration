@@ -1,0 +1,18 @@
+shortname: wkvs
+name: well-known-value-service
+version: 0.1.1
+api:
+  rest:
+    produces:
+      public: true
+      gateway_prefix: '/api/wkvs'
+    consumes:
+      dcs: 
+        config_parameter: dcs_api_url
+      ucs:
+        config_parameter: ucs_api_url
+      wps:
+        config_parameter: wps_api_url
+extra_config:
+  crypt4gh_public_key:
+    value_instructions:  The GHGA crypt4gh public key

@@ -1,6 +1,6 @@
 shortname: dcs
 name: download-controller-service
-version: 0.6.0
+version: 0.6.4
 api: 
   rest:
     produces:
@@ -44,4 +44,4 @@ extra_config:
   auth_algs:
     value_instructions: Must matched with the algorithm used to create signing credentials of work package service, not the auth adapter
   presigned_url_expires_after:
-    value: 10
+    value: 30

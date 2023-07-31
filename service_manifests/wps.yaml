@@ -1,6 +1,6 @@
 shortname: wps
 name: work-package-service
-version: 0.1.1
+version: 0.1.3
 api:  
   rest:
     produces:

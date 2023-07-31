@@ -1,0 +1,8 @@
+# ignore VS Code settings
+.vscode/
+.idea/
+
+# desktop settings and thumbnails
+.DS_Store
+desktop.ini
+thumbs.db

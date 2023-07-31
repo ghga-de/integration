@@ -5,8 +5,12 @@ auth_algs: <Please fill - Must matched with the algorithm used to create signing
 auth_check_claims:
   email: null
   exp: null
+  file_id: null
+  full_user_name: null
   iat: null
-  name: null
+  type: null
+  user_id: null
+  user_public_crypt4gh_key: null
 auth_key: <Please fill - Must matched to signing credentials of work package service,
   not the auth adapter>
 auth_map_claims: {}
@@ -38,7 +42,7 @@ log_level: info
 openapi_url: /openapi.json
 outbox_bucket: outbox
 port: 8080
-presigned_url_expires_after: 10
+presigned_url_expires_after: 30
 retry_access_after: 120
 s3_access_key_id: <Please fill>
 s3_endpoint_url: <Please fill>
